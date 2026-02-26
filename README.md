@@ -8,6 +8,7 @@ A simple and elegant to-do list web application built with Node.js, Express, and
 
 - ✅ Add new todos
 - ✅ Mark todos as complete/incomplete
+- ✅ Edit existing todos
 - ✅ Delete todos
 - ✅ Persistent storage using JSON file
 - ✅ Beautiful gradient UI design
@@ -31,22 +32,26 @@ A simple and elegant to-do list web application built with Node.js, Express, and
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/cragkhit/simple-todo-list.git
 cd simple-todo-list
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the server:
+
 ```bash
 npm start
 ```
 
 4. Open your browser and navigate to:
+
 ```
 http://localhost:3000
 ```
@@ -58,7 +63,8 @@ Or simply connect your GitHub repository to Vercel and it will automatically dep
 - `GET /api/todos` - Get all todos
 - `POST /api/todos` - Create a new todo
   - Body: `{ "text": "Todo text" }`
-- `PUT /api/todos/:id` - Toggle todo completion status
+- `PUT /api/todos/:id` - Toggle completion or edit text
+  - Body (optional for edit): `{ "text": "Updated todo text" }`
 - `DELETE /api/todos/:id` - Delete a todo
 
 ## Project Structure
